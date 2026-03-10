@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Employee Attrition</title>
+</head>
+
+<body>
+
+    <div id="bar">
+        <div id="progress" style="width: {{ 100 - prob }}%;"></div>
+    </div>
+
+    <br>
+    <p id="statement">Probability of the employee leaving the company is {{ prob }}</p>
+
+    {% if pred == 1 %}
+        <p class="final">The employee is likely to leave the company</p>
+    {% else %}
+        <p class="final">The employee is likely to not leave the company</p>
+    {% endif %}
+
+</body>
+</html>

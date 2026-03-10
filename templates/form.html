@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Employee Attrition Predictor</h1>
+
+        <form action="/model" method="POST">
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" name="Age" min="18" max="60" step="1">
+        </div>
+
+        <div class="form-group">
+            <label>Monthly Income</label>
+            <input type="number" name="MonthlyIncome">
+        </div>
+
+        <div class="form-group">
+            <label>Distance From Home (miles)</label>
+            <input type="number" name="DistanceFromHome">
+        </div>
+
+        <div class="form-group">
+            <label>Education</label>
+                <select name="Education">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label>Environment Satisfaction</label>
+            <select name="EnvironmentSatisfaction">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Job Involvement</label>
+            <select name="JobInvolvement">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Job Level</label>
+            <select name="JobLevel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Job Satisfaction</label>
+            <select name="JobSatisfaction">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Number of Companies Worked</label>
+            <input type="number" name="NumCompaniesWorked">
+        </div>
+
+        <div class="form-group">
+            <label>Percent Salary Hike</label>
+            <input type="number" name="PercentSalaryHike">
+        </div>
+
+        <div class="form-group">
+        <label>Relationship Satisfaction</label>
+            <select name="RelationshipSatisfaction">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Stock Option Level</label>
+            <select name="StockOptionLevel">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Total Working Years</label>
+            <input type="number" name="TotalWorkingYears">
+        </div>
+
+        <div class="form-group">
+            <label>Training Times Last Year</label>
+            <input type="number" name="TrainingTimesLastYear">
+        </div>
+
+        <div class="form-group">
+            <label>Work Life Balance</label>
+            <select name="WorkLifeBalance">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Years At Company</label>
+            <input type="number" name="YearsAtCompany">
+        </div>
+
+        <div class="form-group">
+            <label>Years In Current Role</label>
+            <input type="number" name="YearsInCurrentRole">
+        </div>
+
+        <div class="form-group">
+            <label>Years Since Last Promotion</label>
+            <input type="number" name="YearsSinceLastPromotion">
+        </div>
+
+        <div class="form-group">
+            <label>Years With Current Manager</label>
+            <input type="number" name="YearsWithCurrManager">
+        </div>
+
+        <div class="form-group">
+            <label>Business Travel</label>
+            <select name="BusinessTravel">
+                <option value="Non-Travel">Non Travel</option>
+                <option value="Travel_Frequently">Travel Frequently</option>
+                <option value="TravelRarely">Travel Rarely</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Department</label>
+            <select name="Department">
+                <option value="Human Resources">Human Resources</option>
+                <option value="Research & Development">Research & Development</option>
+                <option value="Sales">Sales</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Education Field</label>
+            <select name="EducationField">
+                <option value="Human Resources">Human Resources</option>
+                <option value="Life Sciences">Life Sciences</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Medical">Medical</option>
+                <option value="Technical Degree">Technical Degree</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <select name="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Job Role</label>
+            <select name="JobRole">
+                <option>Healthcare Representative</option>
+                <option>Human Resources</option>
+                <option>Laboratory Technician</option>
+                <option>Manager</option>
+                <option>Manufacturing Director</option>
+                <option>Research Director</option>
+                <option>Research Scientist</option>
+                <option>Sales Executive</option>
+                <option>Sales Representative</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Marital Status</label>
+            <select name="MaritalStatus">
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Single">Single</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Overtime</label>
+            <select name="Overtime">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <button type="submit" class="predict-btn">Predict</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
